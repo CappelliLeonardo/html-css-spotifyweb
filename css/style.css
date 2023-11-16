@@ -19,15 +19,14 @@ html{
 
 .container{
     display: flex;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 /*
     A-SIDE
 */
-.container{
-    width: 100%;
-    margin: 0 auto;
-}
 
 .a-side{
     width: 20%;
@@ -43,9 +42,11 @@ html{
     MAIN-SECTION 
 */
 
+
 .main-section{
     width: 80%;
     height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
 /*
@@ -55,6 +56,64 @@ html{
 footer{
     height: 80px;
     background-color: lightcoral;
+    display: flex;
+    align-items: center;
+}
+
+.flex-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.left-footer{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.left-footer img{
+    height: 60px;
+}
+
+.central-footer{
+    width: 50%;
+    text-align: center;
+}
+
+.right-footer{
+    width: 20%;
+}
+
+
+
+.track-line{
+    width: 80%;
+    background-color: #545454;
+    height: 2px;
+}
+
+.track-progression{
+    width: 20%;
+    height: 2px;
+    background-color: blue;
+}
+
+.track-box{
+    display: flex;
+}
+
+
+/* 
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.central-footer{
+    width: calc((100% / 3) * 2);
 }
 
 .left-footer{
@@ -62,16 +121,16 @@ footer{
     align-items: center;
 }
 
-.left-footer  div img{
-    display: inline-block;
+.left-footer img{
+    display: block;
 }
 
 .fav-song-box{
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 33%;
 }
 
 .fav-song-box div{
     width: 50%;
-}
+} */
