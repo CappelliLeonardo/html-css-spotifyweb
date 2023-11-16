@@ -43,11 +43,12 @@ aside{
     MAIN-SECTION 
 */
 
-
+/* main section header  */
 .main-section{
     width: 80%;
     height: calc(100vh - 80px);
     overflow-y: auto;
+    background-color: #141921;
 }
 
 .main-section header{
@@ -74,6 +75,51 @@ aside{
     padding: 5px 15px;
     border-radius: 40px;
     color: white;
+}
+
+/* fine main section header  */
+
+.main-section nav{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-section nav{
+    margin: 30px;
+}
+
+.main-section nav li{
+    padding: 10px;
+}
+
+.main-section nav li a{
+    text-decoration: none;
+    color: #7D7F84;
+}
+
+/*
+    MY ROW
+*/
+
+.recently-played-box, .recommended-box{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.recently-played-box h2, .recommended-box h2, #recommended-p{
+    margin-left: 10px;
+}
+.my-row{
+    display: flex;
+}
+.my-col{
+    width: calc(100% / 6);
+    margin: 10px;
+}
+
+.album-text{
+    text-align: center;
 }
 
 /*
