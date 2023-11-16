@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+img{
+    width: 100%;
+}
 /*
 GENERAL
 */
@@ -16,6 +18,60 @@ html{
 }
 
 .container{
-    max-width: 1200px;
+    display: flex;
+}
+
+/*
+    A-SIDE
+*/
+.container{
+    width: 100%;
     margin: 0 auto;
+}
+
+.a-side{
+    width: 20%;
+    background-color: black;
+    color: gray;
+}
+
+#logo-box{
+    display: flex;
+}
+
+/*
+    MAIN-SECTION 
+*/
+
+.main-section{
+    width: 80%;
+    height: calc(100vh - 80px);
+}
+
+/*
+    FOOTER
+*/
+
+footer{
+    height: 80px;
+    background-color: lightcoral;
+}
+
+.left-footer{
+    display: flex;
+    align-items: center;
+}
+
+.left-footer  div img{
+    display: inline-block;
+}
+
+.fav-song-box{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.fav-song-box div{
+    width: 50%;
 }
