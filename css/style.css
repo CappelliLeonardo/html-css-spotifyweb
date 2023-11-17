@@ -8,6 +8,7 @@
 }
 img{
     width: 100%;
+    display: block;
 }
 /*
 GENERAL
@@ -39,9 +40,6 @@ aside{
 
 
 
-
-
-
 /*
     MAIN-SECTION 
 */
@@ -59,6 +57,7 @@ aside{
     height: 80px;
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 
 .main-section header{
@@ -70,6 +69,12 @@ aside{
 .main-section header div{
     margin-right: 50px;
 }
+
+.main-section header div:hover{
+    font-size: large;
+}
+
+
 .main-section header div a{
     text-decoration: none;
 }
@@ -79,6 +84,36 @@ aside{
     border-radius: 40px;
     color: white;
 }
+
+
+.album-img{
+    position: relative;
+}
+.play-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.play-hover i{
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+    display: none;
+}
+
+.my-col:hover .play-hover, .play-hover i{
+    display: block;
+}
+
+
 
 /* fine main section header  */
 
@@ -101,6 +136,11 @@ aside{
     color: #7D7F84;
 }
 
+nav li a :hover{
+    color: white;
+}
+
+
 /*
     MY ROW
 */
@@ -110,11 +150,22 @@ aside{
     margin-right: 50px;
 }
 
-.recently-played-box h2, .recently-played-box div p{
+
+.margin-left-text-played-box{
     margin-left: 10px;
 }
+
 .my-row{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.my-row h4{
+    color: white;
+}
+
+.my-row p{
+    color: grey;
 }
 .my-col{
     width: calc((100% / 6) - 20px);
@@ -123,6 +174,18 @@ aside{
 
 .album-text{
     text-align: center;
+}
+
+.album-img.rounded img{
+    border-radius: 50%;
+}
+
+.margin-left-text-played-box h2{
+    color: white;
+}
+
+.margin-left-text-played-box p{
+    color: gray;
 }
 
 /*
@@ -202,4 +265,29 @@ footer i {
     display: flex;
     justify-content: center;
 
+}
+
+/*
+    MEDIA QUERIES
+*/
+
+@media screen and (max-width:1100px) {
+    .my-col {
+        width: calc((100% / 4) - 20px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .my-col {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media screen and (max-width:600px) {
+    aside{
+        width: 80px;
+    }
+    .main-section{
+        width: calc(100% - 80px);
+    }
 }
