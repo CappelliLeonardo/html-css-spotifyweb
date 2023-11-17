@@ -30,10 +30,45 @@ html{
     A-SIDE
 */
 
+#logo-box :first-child{
+    display: none;
+}
+
 aside{
     width: 200px;
     background-color: black;
     color: gray;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+aside nav ul li span :first-child{
+    width: 15%;
+    display: inline-block;
+}
+
+aside nav ul li, .playlist-box, .playlist-scroll{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.playlist-box i{
+    font-size: 2em;
+}
+.playlist-box div i,span{
+    vertical-align: middle;
+}
+
+.playlist-scroll{
+    overflow: auto;
+    height:100%;
+    list-style-type: none;
+    min-height: 150px;
+}
+
+.playlist-scroll li{
+    padding-top: 10px;
 }
 
 
@@ -289,5 +324,13 @@ footer i {
     }
     .main-section{
         width: calc(100% - 80px);
+    }
+
+    #logo-box :first-child{
+        display: block;
+    }
+    
+    #logo-box :last-child{
+        display: none;
     }
 }
