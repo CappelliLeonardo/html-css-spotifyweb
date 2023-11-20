@@ -42,7 +42,9 @@ aside{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
+
 
 aside nav ul li span :first-child{
     width: 15%;
@@ -61,10 +63,11 @@ aside nav ul li, .playlist-box, .playlist-scroll{
 }
 
 .playlist-scroll{
-    overflow: auto;
-    height:100%;
+    overflow-y: auto;
+    height :100%;
     list-style-type: none;
     min-height: 150px;
+    flex-grow: 2;
 }
 
 .playlist-scroll li{
@@ -87,11 +90,19 @@ aside nav ul li, .playlist-box, .playlist-scroll{
 #user-box{
     display: flex;
     align-items: center;
+    width: 50%;
 }
 
 #user-box div, h4{
     padding: 5px;
 }
+
+.img-user{
+    background-color: gray;
+    border-radius: 50%;
+    width: 50%;
+}
+
 
 
 
@@ -248,58 +259,41 @@ nav li a :hover{
 */
 
 footer{
-    height: 80px;
     background-color: #282828;
-    display: flex;
-    align-items: center;
     color: white;
 }
 
-footer i {
-    font-size: larger;
-    padding: 5px;
-}
-
-.flex-footer{
+.footer-flex{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-}
-.left-footer{
-    display: flex;
     align-items: center;
-    width: 30%;
-    margin-left: 20px;
+    height: 80px;
 }
 
-.left-footer img{
+.fav-song-box{
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+.fav-song-box div{
+    margin: 5px;
+}
+.i-cani{
     height: 60px;
+    width: 60px;
 }
 
-.left-footer h5, .left-footer h6 {
-    padding: 5px;
-}
-
-
-
-.central-footer{
-    width: 40%;
-    text-align: center;
-}
-
-.right-footer{
-    width: 30%;
+.central-footer-part{
     display: flex;
+    flex-direction: column;
+    width: calc(100% / 2);
     align-items: center;
-    justify-content: flex-end;
 }
 
-.right-footer .track-line{
-    margin-right: 20px ;
+.central-footer-part div span{
+    font-size: 1.5em;
+    margin: 3px;
 }
-
-
 
 .track-line{
     width: 50%;
@@ -319,8 +313,30 @@ footer i {
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
+
+.track-box p{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.right-footer-part{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+}
+
+.icon-flex{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
 
 /*
     MEDIA QUERIES
@@ -348,11 +364,22 @@ footer i {
 
     #logo-box :first-child{
         display: block;
+        padding: 10px;
     }
     
     #logo-box :last-child{
         display: none;
     }
 
-    
+    #home-display-none, #cerca-display-none, #libreria-display-none{
+        display: none;
+    }
+    aside nav ul li span :first-child{
+        width: 55%;
+    }
+
+    .playlist-box, .playlist-scroll{
+        display: none;
+    }
+
 }
