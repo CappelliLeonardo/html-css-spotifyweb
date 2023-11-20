@@ -46,14 +46,17 @@ aside{
 }
 
 
+.container aside div nav ul{
+    list-style-type: none;
+}
 aside nav ul li span :first-child{
     width: 15%;
     display: inline-block;
 }
 
 aside nav ul li, .playlist-box, .playlist-scroll{
-    padding-left: 20px;
-    padding-top: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .playlist-box i{
     font-size: 2em;
@@ -63,11 +66,10 @@ aside nav ul li, .playlist-box, .playlist-scroll{
 }
 
 .playlist-scroll{
-    overflow-y: auto;
-    height :100%;
+    overflow: auto;
+    min-width: 200px;
     list-style-type: none;
-    min-height: 150px;
-    flex-grow: 2;
+    max-height: 150px;
 }
 
 .playlist-scroll li{
@@ -380,6 +382,22 @@ footer{
 
     .playlist-box, .playlist-scroll{
         display: none;
+    }
+
+    .installa-app-box h4{
+        display: none;
+    }
+
+    .hr-installa-app{
+        display: none;
+    }
+
+    .user-box h4{
+        display: none;
+    }
+
+    .installa-app-box div i{
+        font-size: 2em;
     }
 
 }
