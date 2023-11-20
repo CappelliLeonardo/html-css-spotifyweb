@@ -71,7 +71,27 @@ aside nav ul li, .playlist-box, .playlist-scroll{
     padding-top: 10px;
 }
 
+.installa-app-box{
+    display: flex;
+    padding: 5px;
+}
 
+.installa-app-box div, h4{
+    padding: 5px;
+}
+
+#hr-installa-app{
+    padding: 5px;   
+}
+
+#user-box{
+    display: flex;
+    align-items: center;
+}
+
+#user-box div, h4{
+    padding: 5px;
+}
 
 
 
@@ -333,4 +353,6 @@ footer i {
     #logo-box :last-child{
         display: none;
     }
+
+    
 }
